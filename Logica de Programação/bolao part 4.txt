@@ -1,0 +1,51 @@
+using System;
+
+public class HelloWorld
+{
+	public static void Main(string[] args)
+	{
+		bool repetir = false;
+		Console.Write("Quantos jogos vc deseja fazer? ");
+		int jogadas = int.Parse(Console.ReadLine());
+		do
+		{
+			Console.Write("Quantas dezenas vc deseja fazer? ");
+			int dezenas = int.Parse(Console.ReadLine());
+		    if (dezenas <= 15)
+		    {
+			if (dezenas >= 6)
+			{
+				repetir = false;
+				for (int n = 1; n <= jogadas; n++)
+				{
+					Console.WriteLine($"\nJogo {n}:");
+					for (int contador = 1; contador <= dezenas; contador++)
+					{
+						Random na = new Random();
+						int valores = na.Next(01, 60);
+						if (contador == dezenas)
+						{
+							Console.Write(valores.ToString("00"));
+						}
+						else
+						{
+							Console.Write(valores.ToString("00")+"-");
+						}
+					}
+				}
+			}
+			else
+			{
+				repetir = true;
+				Console.WriteLine("Ops! minimo de dezenas e 6! digite novamente o numero de dezenas ;) ");
+			}
+		    }
+		    else
+		    {
+		    		repetir = true;
+				Console.WriteLine("Ops! o maximo e 15 dezenas digite novamente o numero de dezenas ;) ");
+		    }
+		}
+		while (repetir == true);
+	}
+}

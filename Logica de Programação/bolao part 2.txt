@@ -1,0 +1,33 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.Write("Quantos jogos de 6 dezenas vc deseja fazer? ");
+        if (int.TryParse(Console.ReadLine(), out int jogadas))
+        {
+            for (int n = 1; n <= jogadas; n ++)
+            {
+                Console.WriteLine($"\nJogo {n}:");
+                for (int contador = 1; contador <= 6; contador ++)
+                {
+                    Random na = new Random();
+	                int valores = na.Next(1, 60);
+	                if(contador == 6)
+	                {
+	                    Console.Write($"{valores}");
+	                }
+	                else
+	                {
+	                    Console.Write($"{valores}-");
+	                }
+                }
+            }
+        }
+        else
+        {
+            Console.Write("Insira um numero valido!");
+        }
+    }
+}

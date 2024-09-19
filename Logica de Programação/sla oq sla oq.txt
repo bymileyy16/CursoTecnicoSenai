@@ -1,0 +1,16 @@
+Oq é o GIT?
+Git ₍ₒᵤ em inglês britânico₎ 
+é um sistema de controle de versões distribuído, usado principalmente no desenvolvimento de software, mas pode ser usado para registrar o histórico de edições de qualquer tipo de arquivo.
+
+Como surgiu?
+Inicialmente, as pessoas desenvolvedoras que trabalhavam no kernel (núcleo) do Linux usavam o sistema do BitKeeper. 
+Porém, os criadores removeram o acesso gratuito após uma polêmica sobre direitos autorais. 
+Insatisfeito, Torvalds decidiu criar um sistema semelhante com código aberto, dando origem assim ao Git.
+
+Como Funciona?
+GitHub hospeda repositórios do Git e fornece aos desenvolvedores ferramentas para enviar um código melhor por meio das funcionalidades de linha de comando, 
+problemas(discussões encadeadas), pull requests, revisão de código ou o uso de uma coleção de aplicativos grátis e para compra em GitHub Marketplace.
+
+Qual o seu proposito?
+O GitHub armazena os arquivos de determinado projeto na nuvem. Assim, a plataforma conta com um banco de dados que pode ser acessado de qualquer lugar pela internet. 
+O usuário do GitHub tem acesso aos projetos e pode iniciar o seu selecionando um já existente para otimizar ou editar para a sua necessidade

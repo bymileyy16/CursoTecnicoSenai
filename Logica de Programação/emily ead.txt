@@ -1,0 +1,89 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("Informe o seu peso em quilos: ");
+		double peso = Convert.ToDouble(Console.ReadLine());
+		
+		Console.WriteLine("Infome a sua altura: ");
+		double altura = Convert.ToDouble(Console.ReadLine());
+		
+		
+        Console.WriteLine("1 - Diabetes");
+        Console.WriteLine("2 - Problemas nas articulações (Ex: artrite)");
+        Console.WriteLine("3 - Problemas cardíacos");
+        Console.WriteLine("4 - Obesidade ");
+		Console.WriteLine("5 - Dores nas costas ");
+		Console.WriteLine("6 - Ansiedade ou estresse ");
+		
+		Console.WriteLine(" Você possui algum desses problemas listados acima? ");
+		string problemas = Convert.ToString(Console.ReadLine());
+		
+		switch (problemas)
+		{
+			case "1":
+				double imc = peso / (altura * altura);
+				Console.WriteLine(" ° Sugestão de exercícios: ");
+		        Console.WriteLine(" ° Caminhadas rápidas ");
+		        Console.WriteLine(" ° Natação ");
+		        Console.WriteLine(" ° Treinamento de resistência (com pesos leves a moderados) ");
+		        Console.WriteLine(" ° Exercícios aeróbicos de baixa intensidade ");
+		        Console.WriteLine(" ° Yoga (ajuda no controle de estresse e glicemia) ");
+				Console.WriteLine($" Seu IMC é de: "+ Math.Round(imc,2));
+			break;	
+				case "2":
+				 imc = peso / (altura * altura);
+				Console.WriteLine(" ° Sugestão de exercícios: ");
+		        Console.WriteLine(" ° Hidroginástica ");
+		        Console.WriteLine(" ° Caminhadas leves ");
+		        Console.WriteLine(" ° Ciclismo (com baixa resistência) ");
+		        Console.WriteLine(" ° Alongamento e yoga ");
+		        Console.WriteLine(" ° Pilates (fortalecimento sem sobrecarga articular) ");
+				Console.WriteLine($" Seu IMC é de: "+ Math.Round(imc,2));
+			break;
+				case "3":
+				 imc = peso / (altura * altura);
+				Console.WriteLine(" ° Sugestão de exercícios: ");
+		        Console.WriteLine(" ° Caminhadas moderadas ");
+		        Console.WriteLine(" ° Bicicleta leve ");
+		        Console.WriteLine(" ° Natação ");
+		        Console.WriteLine(" ° Exercícios de alongamento ");
+		        Console.WriteLine(" ° Tai Chi (uma forma de exercício suave que também ajuda com equilíbrio) ");
+				Console.WriteLine($" Seu IMC é de: "+ Math.Round(imc,2));
+			break;
+				case "4":
+				 imc = peso / (altura * altura);
+				Console.WriteLine(" ° Sugestão de exercícios: ");
+		        Console.WriteLine(" ° Caminhadas e caminhadas rápidas  ");
+		        Console.WriteLine(" ° Natação ");
+		        Console.WriteLine(" ° Exercícios em bicicleta ergométrica  ");
+		        Console.WriteLine(" ° Exercícios aeróbicos de baixo impacto  ");
+		        Console.WriteLine(" ° Hidroginástica ");
+				Console.WriteLine($" Seu IMC é de: "+ Math.Round(imc,2));
+			break;
+				case "5":
+				 imc = peso / (altura * altura);
+				Console.WriteLine(" ° Sugestão de exercícios: ");
+		        Console.WriteLine(" ° Caminhada em ritmo leve  ");
+		        Console.WriteLine(" ° Natação ou hidroginástica  ");
+		        Console.WriteLine(" ° Yoga com foco em alongamento e fortalecimento do núcleo  ");
+		        Console.WriteLine(" ° Pilates (fortalecimento do núcleo) ");
+		        Console.WriteLine(" ° Exercícios de alongamento e mobilidade ");
+				Console.WriteLine($" Seu IMC é de: "+ Math.Round(imc,2));
+			break;
+				case "6":
+				 imc = peso / (altura * altura);
+				Console.WriteLine(" ° Sugestão de exercícios: ");
+		        Console.WriteLine(" ° Yoga ");
+		        Console.WriteLine(" ° Tai Chi ");
+		        Console.WriteLine(" ° Meditação guiada (combinada com alongamentos) ");
+		        Console.WriteLine(" ° Caminhadas ao ar livre ");
+		        Console.WriteLine(" ° Dança (para liberar endorfina) ");
+				Console.WriteLine($" Seu IMC é de: "+ Math.Round(imc,2));
+			break;
+		 }	
+	}
+}
+

@@ -1,0 +1,32 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+       int ct = 0;
+       int t = 0;
+        Random na = new Random();
+		int ns = na.Next(1, 100);
+		do
+		{ 
+			Console.Write("Tente adivinhar um número de 1 a 100: ");
+		    t = Convert.ToInt32(Console.ReadLine());
+		    ct++;
+		    
+		    switch (t.CompareTo(ns))
+		    {
+		        case<0:
+		            Console.WriteLine("Muito Baixo. Tente novamente");
+		            break;
+		        case>0:
+		            Console.WriteLine("Muito Alto. Tente novamente");
+		            break;
+		        case 0:
+		            Console.WriteLine($"Parabéns, você acertou em {ct} tentativas");
+		            break;
+		    }
+		}
+		while(t != ns);
+    }
+}

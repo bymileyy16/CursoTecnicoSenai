@@ -1,0 +1,40 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine ("Informe a distancia em metros" );
+        if (int.TryParse(Console.ReadLine(), out int metro))
+        {
+            Console.Write("Escolha a unidade de conversão (km, cm, mi): ");
+            string unidadeMedida = Console.ReadLine();
+            int resultado = 0;
+            switch (unidadeMedida)
+            {
+                case "cm" :
+                    resultado = metro * 100;
+                    Console.WriteLine($"Essa distancia em centimentros é igual a {resultado}");
+                    break;
+                case "km" :
+                    resultado = metro / 1000;
+                    Console.WriteLine($"Essa distancia em kilometros é igual a {resultado}");
+            break;
+            
+            case "mi":
+                resultado = metro / 1609;
+                Console.WriteLine($"Essa distancia em milhas é igual a {resultado}");
+             break;
+        default:
+            Console.WriteLine("Escreva uma unidade de medida valida!");
+            break;
+            }
+        }
+        else
+        {
+        Console.WriteLine("Escreva um numero valido!");
+        }
+    }

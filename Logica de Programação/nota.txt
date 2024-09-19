@@ -1,0 +1,31 @@
+using System;
+					
+public class program
+{
+	public static void Main()
+	{
+
+		Console.WriteLine("informar nota 1 ");
+		double nota1 = Convert.ToDouble(Console.ReadLine());
+
+		Console.WriteLine("informar nota 2" );
+		double nota2 = Convert.ToDouble(Console.ReadLine());
+		
+		Console.WriteLine("Informar nota 3 ");
+		double nota3 = Convert.ToDouble(Console.ReadLine());
+
+		Console.WriteLine("informar nota 4 ");
+		double nota4 = Convert.ToDouble(Console.ReadLine());
+		
+		double media =( nota1 + nota2 + nota3 + nota4) / 4;
+		Console.WriteLine("Media = " + media);
+
+		// Verifica se o número e par ou impar
+		if (nota1 % 2 == 0)
+		{
+			Console.WriteLine ( $"o numero {nota1} é par." );
+		}
+			Console.WriteLine ( $"O numero {nota1} é impar.");
+		}
+		
+	}

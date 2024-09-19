@@ -1,0 +1,34 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.Write("informar o imposto de renda:" );
+		if (decimal.TryParse(Console.ReadLine(), out decimal salarioBruto))
+		{
+			decimal imposto;
+			if ( salarioBruto <= 3000)
+			{
+				imposto = salarioBruto * 0.10m;
+				Console.WriteLine("O valor do imposto de 10% a ser pago é: " + imposto);
+			}
+			else
+			{
+				if ( salarioBruto <= 6000)
+				{
+					imposto = salarioBruto * 0.15m;
+					Console.WriteLine("O valor do imposto de 15% a ser pago é: " + imposto);
+				}
+				else
+				{
+					imposto = salarioBruto * 0.20m;
+					Console.WriteLine("O valor do imposto de 20% a ser pago é: " + imposto);
+				}
+			}
+		}
+		else 
+		{
+			Console.WriteLine("ERRO: Você nao informou um valor valido");
+		}
+			

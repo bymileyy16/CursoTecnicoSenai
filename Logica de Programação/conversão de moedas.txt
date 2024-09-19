@@ -1,0 +1,22 @@
+vusing System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine(" insira o valor: ");
+		if (double.TryParse(Console.ReadLine(), out double valor))
+		{
+			Console.WriteLine("o valor em dolar:" + Math.Round((valor/5.47),3));
+			
+			Console.WriteLine("o valor em libras:" + Math.Round((valor/6.09),2));
+			
+			Console.WriteLine("o valor em euro:"   + Math.Round((valor/7.13),3));
+		}
+		else
+		{
+			Console.WriteLine(" Valor invalido ");
+		}
+	
+	}
+}

@@ -1,0 +1,35 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.Write("Quantos jogos voce deseja ");
+         int jogadas = int.Parse(Console.ReadLine());
+         Console.Write("Quantas dezenas voce deseja ");
+          int dezenas = int.Parse(Console.ReadLine());
+          if (dezenas >= 6)
+          {
+            for (int n = 1; n <= jogadas; n ++)
+            {
+                Console.WriteLine($"\nJogo {n}:");
+                for (int contador = 1; contador <= dezenas; contador ++)
+                {
+                    Random na = new Random();
+	                int valores = na.Next(1, 60);
+	                if(contador == dezenas)
+	                {
+	                    Console.Write($"{valores}");
+	                }
+	                else
+	                {
+	                    Console.Write($"{valores}-");
+	                }
+                }
+            }
+          }
+          else
+          {
+              Console.WriteLine(" Ops! Minimo de dezenas e 6");
+          }
+    }

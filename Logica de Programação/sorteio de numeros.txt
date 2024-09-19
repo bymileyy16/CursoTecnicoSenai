@@ -1,0 +1,15 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        int j = 0;
+        for(j = 0; j < 6; j++)
+        {
+            Random na = new Random();
+            int vi = na.Next(10, 99);
+            Console.WriteLine("Os numero sorteados são: "+ vi);
+        }
+    }
+}

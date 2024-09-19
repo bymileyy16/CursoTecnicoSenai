@@ -1,0 +1,57 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+	public static void Main(string[] args)
+	{
+		bool repetir = false; // Esse comando serve para declarar a variavel de repetição 
+		Console.Write("Informe o valor do premio: ");//Esse comando e para indicar impressao na tela
+	    double premio = double.Parse(Console.ReadLine));//declarar variavel e ler o valor
+		Console.Write("Quantos jogos vc deseja fazer? ");//Esse comando e para indicar impressao na tela
+		int jogadas = int.Parse(Console.ReadLine());//Declaração da variavel e leitura do valor
+		do// Extrutura de repetição
+		{
+			Console.Write("Quantas dezenas vc deseja fazer? ");//Esse comando e para indicar impressao na tela
+			int dezenas = int.Parse(Console.ReadLine());//declarar variavel e ler o valor
+		    if (dezenas <= 15)// if e uma estrutura de controle em que permite que o programa tomar decisões baseadas em condições
+		    {
+			if (dezenas >= 6)//if é uma estrutura de controle em que permite que o programa tome decisões baseadas em condições
+			{
+				repetir = false;//Esse comando serve para declarar a variavel de repetição 
+				for (int n = 1; n <= jogadas; n++) //é a estrutura de repetição que utilizamos quando sabemos a quantidade de repetições 
+				{
+					Console.WriteLine($"\nJogo {n}:");
+					for (int contador = 1; contador <= dezenas; contador++)//é a estrutura de repetição que utilizamos quando sabemos a quantidade de repetições que um bloco de código deve ser executado.
+					{
+						Random na = new Random();//gera um número aleatório 
+						int valores = na.Next(01, 60);//declarar variavel e ler o valor
+						if (contador == dezenas)// if e uma estrutura de controle em que permite que o programa tome decisões baseadas em condições
+						{
+							Console.Write(valores.ToString("00"));//Esse comando e para indicar impressao na tela
+						}
+						else // a função do else seria o "se nao" ou "se sim"
+						{
+							Console.Write(valores.ToString("00")+"-");//Esse comando e para indicar impressao na tela
+						}
+					}
+				}
+			}
+			else// a função do else seria o "se nao" ou "se sim"
+			{
+				repetir = true;// Esse comando serve para declarar a variavel de repetição verdadeira
+				Console.WriteLine("Ops! minimo de dezenas e 6! digite novamente o numero de dezenas ;) "); //Esse comando e para indicar impressao na tela
+			}
+		    }
+		    else// a função do else seria o "se nao" ou "se sim"
+		    {
+		    		repetir = true;;// Esse comando serve para declarar a variavel de repetição verdadeira
+				Console.WriteLine("Ops! o maximo e 15 dezenas digite novamente o numero de dezenas ;) ");
+				//Esse comando e para indicar impressao na tela
+		    }
+		}
+		while (repetir == true);// esse comando serve para repetição tudo que estiver na chave "do"
+	}
+}

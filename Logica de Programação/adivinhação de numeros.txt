@@ -1,0 +1,43 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class Program
+{
+	public static void Main()
+	{
+    	int t = 0;
+    	bool r = false;
+		    Random na = new Random();
+	    	int vi = na.Next(1,100);
+	    	Console.WriteLine(vi);
+	    	do
+	    	{
+				Console.Write("Adivinhe um numero de 1 a 100: ");
+				int n = int.Parse(Console.ReadLine());
+				if (n == vi)
+				{
+					t++;
+					Console.WriteLine("Parabéns! Você Acertou! Com apenas "+ t + " tentativas!");
+					r = true;
+				}
+		    	else
+		    	{
+					if (n > vi)
+					{
+					    t++;
+			        	Console.WriteLine("Muito alto! :(, Tente um número menor. ");
+						r = false;
+					}
+			    	else
+					{
+				        t++;
+				    	Console.WriteLine("Muito baixo! :(, Tente um número maior. ");
+						r = false;
+					}
+			}
+		}
+	    	while (r == false);
+	}
+}

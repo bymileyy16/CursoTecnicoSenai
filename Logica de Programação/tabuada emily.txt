@@ -1,0 +1,20 @@
+using System;
+					
+public class Program
+{
+	public static void numero(int numero)
+	{
+		Console.WriteLine("Tabuada do " + numero +":");
+		for (int i = 0; i <= 10; i++)
+		{
+			int resultado = numero * i;
+			Console.WriteLine(numero + " x " + i + " = " + resultado);
+		}
+	}	
+	public static void Main()
+	{
+	 	Console.WriteLine("Digite um numero para calcular a tabuada: ");
+		int num = int.Parse(Console.ReadLine());
+		numero(num);
+	}
+}

@@ -1,0 +1,27 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.Write ("Digite um texto: ");
+        string texto = Console.ReadLine();
+        char[] vogais = {'a','A','e','E','i','I','o','O','u','U'};
+    int contadorVogal = 0;
+    foreach (char letra in texto)
+    {
+        foreach (char vogal in vogais)
+        {
+            if(letra == vogal)
+            {
+                contadorVogal++;
+            }
+        }
+    }
+   
+       Console.WriteLine($" a quantidade de vogais nesse texto e :{contadorVogal}");
+   }
+}

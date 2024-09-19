@@ -1,0 +1,16 @@
+using System;
+
+public class Program
+{
+	public static void Main(string[] args)
+	{
+		Console.Write("Insira a palavra ou frase que deseja: ");
+		string palavra = Console.ReadLine();
+		{
+			foreach (char letra in palavra)
+			{
+				Console.WriteLine(letra);
+			}
+		}
+	}
+}
